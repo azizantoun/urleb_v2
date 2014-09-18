@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule \.(css|jpe?g|gif|png|js|ico)$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]*)$ /index.php?link=$1 [L]
+
+
